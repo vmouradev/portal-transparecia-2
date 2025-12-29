@@ -5657,3 +5657,273 @@ label {
     font-size: 13px;
   }
 }
+
+/*=============================================================
+ 23. Modernized Actions & News Section Redesign
+===============================================================*/
+
+/* Modern Promo Cards (Ações e Programas) */
+.cs_modern_promo_card {
+  position: relative;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cs_modern_promo_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.cs_modern_promo_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.cs_modern_promo_card:hover::before {
+  opacity: 0.9;
+}
+
+.cs_promo_content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.cs_promo_badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.cs_promo_title {
+  font-size: 28px;
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+
+.cs_promo_desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Modern News (Notícias) Layout */
+.cs_news_header_highlight {
+  background: #fdf2f2;
+  border-left: 4px solid #ef4444;
+  padding: 12px 20px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.cs_update_label {
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cs_update_ticker {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b91c1c;
+  margin: 0;
+}
+
+/* Modern Post Card High Contrast */
+.cs_post_card_modern {
+  background: var(--white-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs_post_card_modern:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.cs_post_img_wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.cs_post_img_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cs_post_card_modern:hover .cs_post_img_wrap img {
+  transform: scale(1.1);
+}
+
+.cs_post_date_badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--white-color);
+  padding: 5px 12px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cs_post_date_day {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.cs_post_date_month {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.cs_post_card_body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs_post_category_tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.cs_post_card_title {
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--black-color);
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.cs_post_card_modern:hover .cs_post_card_title {
+  color: var(--primary-color);
+}
+
+.cs_post_card_footer {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cs_read_more_btn {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs_read_more_btn i {
+  transition: transform 0.3s ease;
+}
+
+.cs_post_card_modern:hover .cs_read_more_btn i {
+  transform: translateX(5px);
+}
+
+/* Horizontal variation for secondary posts */
+.cs_post_card_hor {
+  display: flex;
+  background: var(--white-color);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.cs_post_card_hor:hover {
+  background: #f8fbff;
+  transform: translateX(5px);
+}
+
+.cs_post_card_hor .cs_post_img_wrap {
+  width: 140px;
+  height: 120px;
+}
+
+.cs_post_card_hor .cs_post_card_body {
+  padding: 15px 20px;
+}
+
+.cs_post_card_hor .cs_post_card_title {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 991px) {
+  .cs_modern_promo_card {
+    height: 320px;
+  }
+
+  .cs_post_card_hor {
+    flex-direction: column;
+  }
+
+  .cs_post_card_hor .cs_post_img_wrap {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_post_card_title {
+    font-size: 18px;
+  }
+}
