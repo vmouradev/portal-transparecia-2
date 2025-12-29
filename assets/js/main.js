@@ -403,6 +403,31 @@
     activateTab(currentIndex);
     startAutoplay();
   }
+
+  /*===========================================================
+    15. Portal Access Tabs
+  =============================================================*/
+  if ($.exists(".cs_portal_tab_btn")) {
+    $(".cs_portal_tab_btn").on("click", function (e) {
+      e.preventDefault();
+      
+      // Remove active class from all buttons and contents
+      $(".cs_portal_tab_btn").removeClass("active");
+      $(".cs_portal_tab_content").removeClass("active");
+      
+      // Add active class to clicked button
+      $(this).addClass("active");
+      
+      // Get the tab to show
+      var tabId = $(this).data("tab");
+      $("#tab-" + tabId).addClass("active");
+      
+      // Re-trigger AOS animations for newly visible content
+      if (typeof AOS !== "undefined") {
+        AOS.refresh();
+      }
+    });
+  }
   /*==============================================================
     13. Dynamic contact form
     ===============================================================*/

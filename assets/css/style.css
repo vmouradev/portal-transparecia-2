@@ -4634,3 +4634,142 @@ label {
     margin-bottom: 16px;
   }
 }
+
+/*=============================================================
+ 21. Portal Access Tabs Section
+===============================================================*/
+.cs_portal_tabs_wrapper {
+  position: relative;
+}
+
+.cs_portal_tabs_nav {
+  gap: 12px;
+}
+
+.cs_portal_tab_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
+}
+
+.cs_portal_tab_btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.cs_portal_tab_btn.active {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1565c0 100%);
+  color: var(--white-color);
+  border-color: transparent;
+  box-shadow: 0 8px 25px rgba(31, 119, 214, 0.35);
+}
+
+.cs_portal_tab_btn .cs_tab_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.cs_portal_tab_content {
+  display: none;
+  animation: fadeInUp 0.4s ease;
+}
+
+.cs_portal_tab_content.active {
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service Card Styles */
+.cs_service_card {
+  padding: 28px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.cs_service_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(31, 119, 214, 0.15);
+  border-color: var(--primary-color);
+}
+
+.cs_service_card_icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cs_service_card:hover .cs_service_card_icon {
+  transform: scale(1.1);
+}
+
+.cs_service_card_title {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.cs_service_card:hover .cs_service_card_title {
+  color: var(--primary-color);
+}
+
+.cs_service_card_desc {
+  line-height: 1.5;
+}
+
+/* Gap utility */
+.cs_gap_16 {
+  gap: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .cs_portal_tab_btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .cs_service_card {
+    padding: 20px;
+  }
+  
+  .cs_service_card_icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_portal_tabs_nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cs_portal_tab_btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
