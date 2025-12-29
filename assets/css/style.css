@@ -5010,16 +5010,14 @@ label {
   }
 
   .cs_persona_sidebar {
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    /* Removed overflow-x and scroll snap for simpler vertical stack */
     position: static;
     gap: 12px;
-    padding: 4px 20px 16px 20px;
-    margin: 0 -20px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
+    padding: 0 0 20px 0;
+    margin: 0;
+    width: 100%;
   }
 
   .cs_persona_sidebar::-webkit-scrollbar {
@@ -5027,15 +5025,25 @@ label {
   }
 
   .cs_persona_card {
-    min-width: 260px;
+    min-width: 0;
+    /* Allow full width */
+    width: 100%;
     flex-shrink: 0;
     padding: 16px;
-    scroll-snap-align: start;
+    background: rgba(255, 255, 255, 0.4);
+    /* More visible on mobile */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .cs_persona_card.active {
+    background: var(--white-color);
+    transform: none;
+    /* Disable transform on create shift */
   }
 
   .cs_persona_card:hover,
   .cs_persona_card.active {
-    transform: translateX(0) scale(1.02);
+    transform: none;
   }
 
   .cs_services_grid {
