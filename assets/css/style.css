@@ -4689,6 +4689,15 @@ label {
 /*=============================================================
  21. Portal Access Section - Vertical Layout
 ===============================================================*/
+.cs_portal_section {
+  margin-top: 60px;
+  transition: all 0.3s ease;
+}
+
+.cs_portal_bg {
+  background: linear-gradient(135deg, #0b1120 0%, #111d31 100%);
+}
+
 .cs_portal_layout {
   display: grid;
   grid-template-columns: 320px 1fr;
