@@ -5766,6 +5766,8 @@ label {
 
 /* Modern Promo Cards (Ações e Programas) */
 .cs_modern_promo_card {
+  background-color: #1e293b;
+  background-image: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   position: relative;
   height: 380px;
   border-radius: 20px;
@@ -6011,6 +6013,8 @@ label {
 
 @media (max-width: 991px) {
   .cs_modern_promo_card {
+  background-color: #1e293b;
+  background-image: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     height: 320px;
   }
 
@@ -6147,4 +6151,5 @@ body.cs_dark_mode .cs_insta_header { border-color: #2d3648; }
 body.cs_dark_mode .cs_insta_user { color: #fff; }
 body.cs_dark_mode .cs_insta_feed_container { background: #151921; }
 body.cs_dark_mode .cs_insta_placeholder { border-color: #2d3648; }
+
 
