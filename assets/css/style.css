@@ -5325,3 +5325,325 @@ label {
     transform: translateY(0);
   }
 }
+
+/*=============================================================
+ 22. Discover Barra Section - Events, Tourism & Culture
+===============================================================*/
+.cs_discover_section {
+  background: linear-gradient(135deg, #0c4a6e 0%, #075985 50%, #0369a1 100%);
+  overflow: hidden;
+  margin-top: 60px;
+  border-radius: 24px;
+}
+
+/* Parallax Background */
+.cs_parallax_bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  will-change: transform;
+}
+
+.cs_parallax_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(12, 74, 110, 0.92) 0%,
+      rgba(7, 89, 133, 0.88) 50%,
+      rgba(3, 105, 161, 0.85) 100%);
+}
+
+/* Disable parallax on mobile for performance */
+@media (max-width: 991px) {
+  .cs_parallax_bg {
+    background-attachment: scroll;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .cs_parallax_bg {
+    background-attachment: scroll;
+  }
+}
+
+/* Category Tabs */
+.cs_discover_tabs {
+  margin-bottom: 40px;
+}
+
+.cs_discover_tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.cs_discover_tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.cs_discover_tab.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: 0 8px 30px rgba(245, 158, 66, 0.4);
+}
+
+.cs_discover_tab i {
+  font-size: 16px;
+}
+
+/* Discover Grid */
+.cs_discover_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Discover Card */
+.cs_discover_card {
+  background: var(--white-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cs_discover_card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.cs_discover_card.cs_card_featured {
+  grid-column: span 2;
+}
+
+.cs_discover_card.cs_card_featured .cs_discover_card_img {
+  height: 280px;
+}
+
+/* Card Image */
+.cs_discover_card_img {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cs_discover_card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cs_discover_card:hover .cs_discover_card_img img {
+  transform: scale(1.1);
+}
+
+/* Badge */
+.cs_discover_badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.cs_eventos_badge {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.cs_turismo_badge {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+.cs_cultura_badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* Card Content */
+.cs_discover_card_content {
+  padding: 24px;
+}
+
+.cs_discover_category {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.cs_eventos .cs_discover_category {
+  color: #f59e0b;
+}
+
+.cs_turismo .cs_discover_category {
+  color: #0ea5e9;
+}
+
+.cs_cultura .cs_discover_category {
+  color: #10b981;
+}
+
+.cs_discover_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-family: var(--primary-font);
+  line-height: 1.3;
+}
+
+.cs_discover_desc {
+  font-size: 14px;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cs_discover_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cs_discover_link:hover {
+  gap: 12px;
+}
+
+.cs_eventos .cs_discover_link:hover {
+  color: #f59e0b;
+}
+
+.cs_turismo .cs_discover_link:hover {
+  color: #0ea5e9;
+}
+
+.cs_cultura .cs_discover_link:hover {
+  color: #10b981;
+}
+
+/* White border button */
+.cs_white_border {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+}
+
+.cs_white_border:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+  border-color: var(--white-color);
+}
+
+/* Hide filtered cards */
+.cs_discover_card.cs_hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .cs_discover_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs_discover_card.cs_card_featured {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_discover_grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cs_discover_card.cs_card_featured {
+    grid-column: span 1;
+  }
+
+  .cs_discover_card.cs_card_featured .cs_discover_card_img {
+    height: 200px;
+  }
+
+  .cs_discover_tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .cs_discover_tab i {
+    font-size: 14px;
+  }
+
+  .cs_discover_title {
+    font-size: 18px;
+  }
+
+  .cs_discover_card_content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_discover_tabs {
+    gap: 8px;
+  }
+
+  .cs_discover_tab {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .cs_discover_tab span {
+    display: none;
+  }
+
+  .cs_discover_card_img {
+    height: 180px;
+  }
+
+  .cs_discover_card_content {
+    padding: 16px;
+  }
+
+  .cs_discover_title {
+    font-size: 16px;
+  }
+
+  .cs_discover_desc {
+    font-size: 13px;
+  }
+}

@@ -3,7 +3,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Template Name: Qlinest
+  | Template Name: BARRA DOS COQUEIROS
   | Author: peterdraw
   | Version: 1.0.0
   |--------------------------------------------------------------------------
@@ -486,4 +486,62 @@
       mirror: false,
     });
   }
+
+  /*=============================================================
+    16. Discover Section - Parallax & Category Filter
+  ===============================================================*/
+  // Parallax effect on scroll
+  if ($.exists(".cs_parallax_bg")) {
+    var parallaxBg = $(".cs_parallax_bg");
+    var parallaxSpeed = parseFloat(parallaxBg.data("parallax-speed")) || 0.3;
+
+    // Check for reduced motion preference
+    var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!prefersReducedMotion) {
+      $(window).on("scroll", function () {
+        var scrollTop = $(window).scrollTop();
+        var sectionTop = parallaxBg.closest("section").offset().top;
+        var sectionHeight = parallaxBg.closest("section").outerHeight();
+
+        // Only apply parallax when section is in view
+        if (scrollTop + $(window).height() > sectionTop && scrollTop < sectionTop + sectionHeight) {
+          var yPos = (scrollTop - sectionTop) * parallaxSpeed;
+          parallaxBg.css("transform", "translateY(" + yPos + "px)");
+        }
+      });
+    }
+  }
+
+  // Category filter for Discover cards
+  if ($.exists(".cs_discover_tab")) {
+    $(".cs_discover_tab").on("click", function () {
+      var category = $(this).data("category");
+
+      // Update active tab
+      $(".cs_discover_tab").removeClass("active");
+      $(this).addClass("active");
+
+      // Filter cards
+      if (category === "all") {
+        $(".cs_discover_card").removeClass("cs_hidden").hide().fadeIn(400);
+      } else {
+        $(".cs_discover_card").each(function () {
+          if ($(this).data("category") === category) {
+            $(this).removeClass("cs_hidden").hide().fadeIn(400);
+          } else {
+            $(this).addClass("cs_hidden");
+          }
+        });
+      }
+
+      // Refresh AOS for newly visible cards
+      if (typeof AOS !== "undefined") {
+        setTimeout(function () {
+          AOS.refresh();
+        }, 100);
+      }
+    });
+  }
 })(jQuery); // End of use strict
+
