@@ -4693,7 +4693,8 @@ label {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
+  /* Vertically center sidebar relative to services */
 }
 
 /* Persona Sidebar */
@@ -4701,8 +4702,10 @@ label {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  position: sticky;
-  top: 120px;
+  position: relative;
+  /* Changed from sticky to relative for centering */
+  z-index: 2;
+  /* Ensure above decorative elements */
 }
 
 .cs_persona_card {
