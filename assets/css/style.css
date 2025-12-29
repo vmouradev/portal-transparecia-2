@@ -4926,7 +4926,12 @@ label {
   transform: translateX(4px);
 }
 
-/* Responsive - Improved */
+/* ============================================
+   RESPONSIVE - Mobile First Approach
+   80% of users are on mobile devices
+============================================ */
+
+/* Tablet Landscape (max-width: 1199px) */
 @media (max-width: 1199px) {
   .cs_portal_layout {
     grid-template-columns: 280px 1fr;
@@ -4942,23 +4947,28 @@ label {
   }
 }
 
+/* Tablet Portrait (max-width: 991px) */
 @media (max-width: 991px) {
+  .cs_portal_section {
+    padding: 0 16px;
+  }
+
   .cs_portal_layout {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .cs_persona_sidebar {
     flex-direction: row;
     overflow-x: auto;
+    overflow-y: hidden;
     position: static;
     gap: 12px;
-    padding-bottom: 12px;
-    margin: 0 -16px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 4px 20px 16px 20px;
+    margin: 0 -20px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
   }
 
   .cs_persona_sidebar::-webkit-scrollbar {
@@ -4966,48 +4976,49 @@ label {
   }
 
   .cs_persona_card {
-    min-width: 220px;
+    min-width: 260px;
     flex-shrink: 0;
     padding: 16px;
+    scroll-snap-align: start;
   }
 
   .cs_persona_card:hover,
   .cs_persona_card.active {
-    transform: translateX(0) translateY(-4px);
+    transform: translateX(0) scale(1.02);
   }
 
   .cs_services_grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
 
   .cs_services_panel {
     min-height: auto;
   }
-}
-
-@media (max-width: 767px) {
-  .cs_services_grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
 
   .cs_hover_card {
-    height: 100px;
+    height: 105px;
   }
+}
 
-  .cs_hover_card_title {
-    font-size: 13px;
-    padding: 12px;
+/* Mobile Large (max-width: 767px) */
+@media (max-width: 767px) {
+  .cs_portal_section .cs_section_title {
+    font-size: 28px;
   }
 
   .cs_persona_card {
-    min-width: 200px;
+    min-width: 240px;
+    padding: 14px;
+    gap: 12px;
   }
 
   .cs_persona_icon_wrap {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
     font-size: 20px;
+    border-radius: 12px;
   }
 
   .cs_persona_title {
@@ -5016,42 +5027,34 @@ label {
 
   .cs_persona_desc {
     font-size: 12px;
-  }
-}
-
-@media (max-width: 575px) {
-  .cs_persona_card {
-    min-width: 180px;
-    padding: 14px;
-    gap: 12px;
+    margin-bottom: 4px;
   }
 
-  .cs_persona_icon_wrap {
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
+  .cs_persona_badge {
+    font-size: 9px;
+    padding: 2px 8px;
   }
 
-  .cs_persona_title {
-    font-size: 15px;
-  }
-
-  .cs_persona_count {
-    font-size: 10px;
+  .cs_persona_arrow {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 12px;
   }
 
   .cs_services_grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
   .cs_hover_card {
-    height: 85px;
+    height: 95px;
   }
 
   .cs_hover_card_title {
-    font-size: 12px;
+    font-size: 13px;
     padding: 10px;
+    line-height: 1.3;
   }
 
   .cs_reveal_icon {
@@ -5060,6 +5063,7 @@ label {
 
   .cs_reveal_text {
     font-size: 11px;
+    line-height: 1.2;
   }
 
   .cs_reveal_arrow {
@@ -5067,24 +5071,196 @@ label {
     height: 24px;
     bottom: 8px;
     right: 8px;
+    font-size: 10px;
   }
 }
 
-@media (max-width: 400px) {
+/* Mobile Medium (max-width: 575px) */
+@media (max-width: 575px) {
+  .cs_portal_section .cs_section_title {
+    font-size: 24px;
+  }
+
+  .cs_portal_section .cs_section_subtitle {
+    font-size: 12px;
+  }
+
+  .cs_portal_layout {
+    gap: 16px;
+  }
+
+  .cs_persona_sidebar {
+    padding: 4px 16px 12px 16px;
+    margin: 0 -16px;
+    gap: 10px;
+  }
+
   .cs_persona_card {
-    min-width: 160px;
+    min-width: 200px;
     padding: 12px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+
+  .cs_persona_icon_wrap {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  .cs_persona_title {
+    font-size: 15px;
+    margin-bottom: 1px;
+  }
+
+  .cs_persona_desc {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .cs_persona_badge {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+
+  .cs_persona_arrow {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 11px;
+  }
+
+  .cs_services_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .cs_hover_card {
+    height: 85px;
+    border-radius: 12px;
+  }
+
+  .cs_hover_card_title {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .cs_hover_card_reveal {
+    padding: 10px;
+    gap: 4px;
+  }
+
+  .cs_reveal_icon {
+    font-size: 18px;
+  }
+
+  .cs_reveal_text {
+    font-size: 10px;
+  }
+
+  .cs_reveal_arrow {
+    width: 22px;
+    height: 22px;
+    bottom: 6px;
+    right: 6px;
+    font-size: 9px;
+  }
+
+  /* On very small screens, show reveal by default (no hover on touch) */
+  .cs_hover_card .cs_hover_card_reveal {
+    opacity: 0;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .cs_portal_section .cs_section_title {
+    font-size: 22px;
+  }
+
+  .cs_persona_card {
+    min-width: 170px;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .cs_persona_icon_wrap {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .cs_persona_title {
+    font-size: 14px;
   }
 
   .cs_persona_desc {
     display: none;
   }
 
+  .cs_persona_badge {
+    margin-top: 2px;
+  }
+
+  .cs_persona_arrow {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    font-size: 10px;
+  }
+
   .cs_services_grid {
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
   }
 
   .cs_hover_card {
     height: 75px;
+    border-radius: 10px;
+  }
+
+  .cs_hover_card_title {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .cs_reveal_icon {
+    font-size: 16px;
+  }
+
+  .cs_reveal_text {
+    font-size: 9px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .cs_reveal_arrow {
+    width: 20px;
+    height: 20px;
+    bottom: 4px;
+    right: 4px;
+    font-size: 8px;
+  }
+}
+
+/* Touch devices - Better tap experience */
+@media (hover: none) and (pointer: coarse) {
+  .cs_persona_card:active {
+    transform: scale(0.98);
+  }
+
+  .cs_hover_card:active {
+    transform: scale(0.96);
+  }
+
+  .cs_hover_card:active .cs_hover_card_reveal {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
