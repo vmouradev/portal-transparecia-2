@@ -1,0 +1,205 @@
+/*==============================================================
+  Theme Configurator CSS
+================================================================*/
+.cs_theme_config {
+    position: fixed;
+    top: 50%;
+    right: -320px;
+    width: 320px;
+    background: var(--white-color);
+    transform: translateY(-50%);
+    z-index: 1000;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px 0 0 20px;
+    padding: 30px;
+}
+
+.cs_theme_config.active {
+    right: 0;
+}
+
+.cs_theme_config_btn {
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cs_theme_config_btn i {
+    font-size: 20px;
+    animation: cs_spin 3s linear infinite;
+}
+
+@keyframes cs_spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cs_config_title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--lightest-blue);
+    padding-bottom: 10px;
+}
+
+.cs_config_group {
+    margin-bottom: 20px;
+}
+
+.cs_config_label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.cs_color_swatch_group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cs_color_swatch {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.cs_color_swatch:hover,
+.cs_color_swatch.active {
+    transform: scale(1.2);
+    border-color: var(--gray-color2);
+}
+
+.cs_config_select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-color2);
+    font-size: 14px;
+    background: var(--gray-color1);
+}
+
+/* Layout Toggles */
+.cs_layout_btns {
+    display: flex;
+    gap: 10px;
+}
+
+.cs_layout_btn {
+    flex: 1;
+    padding: 8px;
+    background: var(--gray-color1);
+    border: 1px solid var(--gray-color2);
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cs_layout_btn.active {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+/* Boxed Layout Styles */
+body.cs_boxed_layout {
+    background-color: var(--gray-color2);
+}
+
+body.cs_boxed_layout .cs_custom_content_wrapper {
+    max-width: 1320px;
+    margin: 40px auto;
+    background-color: var(--white-color);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+@media (max-width: 1400px) {
+    body.cs_boxed_layout .cs_custom_content_wrapper {
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+/* Dark Mode */
+body.cs_dark_mode {
+    --white-color: #1a1e26;
+    --gray-color1: #242b38;
+    --gray-color2: #2d3648;
+    --lightest-blue: #242b38;
+    --secondary-color: #a0aec0;
+    --primary-color: #63b3ed;
+    /* Lighter blue for dark mode */
+}
+
+body.cs_dark_mode .cs_custom_content_wrapper {
+    background-color: #1a1e26 !important;
+    color: #fff;
+}
+
+body.cs_dark_mode h1,
+body.cs_dark_mode h2,
+body.cs_dark_mode h3,
+body.cs_dark_mode h4,
+body.cs_dark_mode h5,
+body.cs_dark_mode h6 {
+    color: #fff;
+}
+
+body.cs_dark_mode .cs_site_header.cs_sticky_header {
+    background-color: rgba(26, 30, 38, 0.95);
+}
+
+body.cs_dark_mode .cs_post_card_modern,
+body.cs_dark_mode .cs_post_card_hor,
+body.cs_dark_mode .cs_modern_promo_card,
+body.cs_dark_mode .cs_persona_card {
+    background-color: #242b38;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.cs_mode_switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gray-color1);
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.cs_mode_switch i {
+    font-size: 16px;
+}
+
+.cs_mode_switch.active {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
