@@ -4636,140 +4636,326 @@ label {
 }
 
 /*=============================================================
- 21. Portal Access Tabs Section
+ 21. Portal Access Section - Vertical Layout
 ===============================================================*/
-.cs_portal_tabs_wrapper {
-  position: relative;
+.cs_portal_layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
-.cs_portal_tabs_nav {
-  gap: 12px;
+/* Persona Sidebar */
+.cs_persona_sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 120px;
 }
 
-.cs_portal_tab_btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: var(--secondary-color);
-  font-family: var(--primary-font);
-}
-
-.cs_portal_tab_btn:hover {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-}
-
-.cs_portal_tab_btn.active {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1565c0 100%);
-  color: var(--white-color);
-  border-color: transparent;
-  box-shadow: 0 8px 25px rgba(31, 119, 214, 0.35);
-}
-
-.cs_portal_tab_btn .cs_tab_icon {
+.cs_persona_card {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
+  gap: 16px;
+  padding: 20px;
+  background: var(--white-color);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
 
-.cs_portal_tab_content {
-  display: none;
-  animation: fadeInUp 0.4s ease;
+.cs_persona_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
 }
 
-.cs_portal_tab_content.active {
-  display: block;
+.cs_persona_card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 10px 40px rgba(31, 119, 214, 0.15);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Service Card Styles */
-.cs_service_card {
-  padding: 28px;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  text-decoration: none;
-}
-
-.cs_service_card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(31, 119, 214, 0.15);
+.cs_persona_card.active {
   border-color: var(--primary-color);
+  box-shadow: 0 10px 40px rgba(31, 119, 214, 0.2);
 }
 
-.cs_service_card_icon {
+.cs_persona_card.active::before {
+  transform: scaleY(1);
+}
+
+.cs_persona_visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs_persona_icon_wrap {
   width: 56px;
   height: 56px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  font-size: 24px;
+  transition: transform 0.3s ease;
 }
 
-.cs_service_card:hover .cs_service_card_icon {
+.cs_persona_card:hover .cs_persona_icon_wrap {
   transform: scale(1.1);
 }
 
-.cs_service_card_title {
+.cs_persona_count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cs_persona_info {
+  flex: 1;
+}
+
+.cs_persona_title {
+  font-size: 18px;
+  font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: 8px;
-  transition: color 0.3s ease;
+  margin-bottom: 4px;
+  font-family: var(--primary-font);
 }
 
-.cs_service_card:hover .cs_service_card_title {
+.cs_persona_desc {
+  font-size: 13px;
+  color: var(--secondary-color);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cs_persona_arrow {
   color: var(--primary-color);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
 }
 
-.cs_service_card_desc {
-  line-height: 1.5;
+.cs_persona_card.active .cs_persona_arrow,
+.cs_persona_card:hover .cs_persona_arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* Gap utility */
-.cs_gap_16 {
+/* Services Panel */
+.cs_services_panel {
+  min-height: 400px;
+}
+
+.cs_services_grid {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  animation: fadeSlideIn 0.5s ease;
 }
 
-/* Responsive adjustments */
+.cs_services_grid.active {
+  display: grid;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hover Reveal Cards */
+.cs_hover_card {
+  position: relative;
+  height: 120px;
+  background: var(--white-color);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cs_hover_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.cs_hover_card_title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 16px;
+  transition: all 0.4s ease;
+  font-family: var(--primary-font);
+}
+
+.cs_hover_card_reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Color variations for reveal */
+.cs_hover_card.cs_cidadao .cs_hover_card_reveal {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1565c0 100%);
+}
+
+.cs_hover_card.cs_servidor .cs_hover_card_reveal {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.cs_hover_card.cs_empresas .cs_hover_card_reveal {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.cs_hover_card:hover .cs_hover_card_title {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.cs_hover_card:hover .cs_hover_card_reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cs_reveal_icon {
+  font-size: 24px;
+  color: var(--white-color);
+}
+
+.cs_reveal_text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.cs_reveal_arrow {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.cs_hover_card:hover .cs_reveal_arrow {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .cs_portal_layout {
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+  }
+
+  .cs_services_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 991px) {
-  .cs_portal_tab_btn {
-    padding: 12px 20px;
-    font-size: 14px;
+  .cs_portal_layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  
-  .cs_service_card {
-    padding: 20px;
+
+  .cs_persona_sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    position: static;
+    gap: 12px;
+    padding-bottom: 8px;
   }
-  
-  .cs_service_card_icon {
-    width: 48px;
-    height: 48px;
+
+  .cs_persona_card {
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+
+  .cs_services_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_services_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs_hover_card {
+    height: 100px;
+  }
+
+  .cs_hover_card_title {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 575px) {
-  .cs_portal_tabs_nav {
-    flex-direction: column;
-    align-items: stretch;
+  .cs_persona_card {
+    min-width: 180px;
+    padding: 16px;
   }
-  
-  .cs_portal_tab_btn {
-    justify-content: center;
-    width: 100%;
+
+  .cs_persona_icon_wrap {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .cs_persona_title {
+    font-size: 16px;
+  }
+
+  .cs_services_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .cs_hover_card {
+    height: 90px;
   }
 }
-

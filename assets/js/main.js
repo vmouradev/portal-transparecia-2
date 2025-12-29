@@ -405,23 +405,23 @@
   }
 
   /*===========================================================
-    15. Portal Access Tabs
+    15. Portal Persona Cards
   =============================================================*/
-  if ($.exists(".cs_portal_tab_btn")) {
-    $(".cs_portal_tab_btn").on("click", function (e) {
+  if ($.exists(".cs_persona_card")) {
+    $(".cs_persona_card").on("click", function (e) {
       e.preventDefault();
-      
-      // Remove active class from all buttons and contents
-      $(".cs_portal_tab_btn").removeClass("active");
-      $(".cs_portal_tab_content").removeClass("active");
-      
-      // Add active class to clicked button
+
+      // Remove active class from all cards and grids
+      $(".cs_persona_card").removeClass("active");
+      $(".cs_services_grid").removeClass("active");
+
+      // Add active class to clicked card
       $(this).addClass("active");
-      
-      // Get the tab to show
-      var tabId = $(this).data("tab");
-      $("#tab-" + tabId).addClass("active");
-      
+
+      // Get the persona to show
+      var personaId = $(this).data("persona");
+      $("#services-" + personaId).addClass("active");
+
       // Re-trigger AOS animations for newly visible content
       if (typeof AOS !== "undefined") {
         AOS.refresh();

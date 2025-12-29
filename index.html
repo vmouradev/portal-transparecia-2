@@ -169,310 +169,280 @@
     </section>
     <!-- End About Section -->
     <!--Start Portal Access Section -->
-    <section class="cs_why_choose_section cs_blue_bg3 cs_radius_20">
+    <section class="cs_portal_section cs_blue_bg3 cs_radius_20">
       <div class="cs_height_80 cs_height_lg_40"></div>
       <div class="container p-0">
         <!-- Section Header -->
-        <div class="cs_section_heading_style_1 cs_center_column text-center cs_mb_40">
+        <div class="cs_section_heading_style_1 cs_center_column text-center cs_mb_50">
           <p class="cs_section_subtitle cs_white_bg cs_mb_16" data-aos="fade-down">Acesso Rápido</p>
-          <h2 class="cs_section_title cs_fs_36 cs_black_color cs_mb_16" data-aos="zoom-in">Serviços por Perfil</h2>
-          <p class="cs_primary_color cs_primary_font mb-0">Encontre rapidamente os serviços mais relevantes para você.
-          </p>
+          <h2 class="cs_section_title cs_fs_36 cs_black_color cs_mb_16" data-aos="zoom-in">O que você procura?</h2>
+          <p class="cs_primary_color cs_primary_font mb-0">Selecione seu perfil e encontre os serviços mais relevantes
+            para você.</p>
         </div>
 
-        <!-- Tab Navigation -->
-        <div class="cs_portal_tabs_wrapper" data-aos="fade-up">
-          <div class="cs_portal_tabs_nav d-flex justify-content-center cs_gap_16 cs_mb_40 flex-wrap">
-            <button class="cs_portal_tab_btn active cs_white_bg cs_radius_32 cs_fs_16 cs_semibold" data-tab="cidadao">
-              <span class="cs_tab_icon"><i class="fa-solid fa-user"></i></span>
-              <span>Cidadão</span>
-            </button>
-            <button class="cs_portal_tab_btn cs_white_bg cs_radius_32 cs_fs_16 cs_semibold" data-tab="servidor">
-              <span class="cs_tab_icon"><i class="fa-solid fa-briefcase"></i></span>
-              <span>Servidor</span>
-            </button>
-            <button class="cs_portal_tab_btn cs_white_bg cs_radius_32 cs_fs_16 cs_semibold" data-tab="empresas">
-              <span class="cs_tab_icon"><i class="fa-solid fa-building"></i></span>
-              <span>Empresas</span>
-            </button>
-          </div>
+        <!-- Main Layout: Personas Left + Services Right -->
+        <div class="cs_portal_layout">
+          <!-- Left Sidebar: Persona Cards -->
+          <div class="cs_persona_sidebar" data-aos="fade-right">
+            <!-- Cidadão Persona -->
+            <div class="cs_persona_card active" data-persona="cidadao">
+              <div class="cs_persona_visual">
+                <div class="cs_persona_icon_wrap cs_blue_bg1">
+                  <i class="fa-solid fa-user cs_white_color"></i>
+                </div>
+                <div class="cs_persona_count">9 serviços</div>
+              </div>
+              <div class="cs_persona_info">
+                <h3 class="cs_persona_title">Cidadão</h3>
+                <p class="cs_persona_desc">IPTU, Concursos, Agendamentos e mais</p>
+              </div>
+              <div class="cs_persona_arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
 
-          <!-- Tab Content: Cidadão -->
-          <div class="cs_portal_tab_content active" id="tab-cidadao">
-            <div class="row cs_gap_y_24">
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="0">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-money-bill-wave cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Folha de Pagamento</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Consulta pública de vencimentos e
-                    remunerações</p>
-                </a>
+            <!-- Servidor Persona -->
+            <div class="cs_persona_card" data-persona="servidor">
+              <div class="cs_persona_visual">
+                <div class="cs_persona_icon_wrap cs_accent_bg">
+                  <i class="fa-solid fa-briefcase cs_primary_color"></i>
+                </div>
+                <div class="cs_persona_count">9 serviços</div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="50">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-house cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Habita Barra</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Programas habitacionais do município
-                  </p>
-                </a>
+              <div class="cs_persona_info">
+                <h3 class="cs_persona_title">Servidor</h3>
+                <p class="cs_persona_desc">Portal SEI, Contracheques e mais</p>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="100">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-file-pen cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Concurso e Processo Seletivo</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Editais, resultados e convocações</p>
-                </a>
+              <div class="cs_persona_arrow">
+                <i class="fa-solid fa-chevron-right"></i>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="150">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-receipt cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Portal do Contribuinte</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Acesso a tributos, boletos e certidões
-                  </p>
-                </a>
+            </div>
+
+            <!-- Empresas Persona -->
+            <div class="cs_persona_card" data-persona="empresas">
+              <div class="cs_persona_visual">
+                <div class="cs_persona_icon_wrap"
+                  style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                  <i class="fa-solid fa-building cs_white_color"></i>
+                </div>
+                <div class="cs_persona_count">6 serviços</div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="200">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-shield-halved cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Junta Militar</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Alistamento e serviços militares</p>
-                </a>
+              <div class="cs_persona_info">
+                <h3 class="cs_persona_title">Empresas</h3>
+                <p class="cs_persona_desc">Licitações, Licenças e mais</p>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="250">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-gavel cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Diário Oficial e Legislação</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Leis, decretos e publicações oficiais
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="300">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-file-invoice-dollar cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Débitos – IPTU, ITU, ITBI e ISS</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Consulte e regularize seus débitos</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="350">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-calendar-check cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Agendamento</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Agende atendimentos presenciais</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="400">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-headset cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Atende Fácil</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Central de atendimento ao cidadão</p>
-                </a>
+              <div class="cs_persona_arrow">
+                <i class="fa-solid fa-chevron-right"></i>
               </div>
             </div>
           </div>
 
-          <!-- Tab Content: Servidor -->
-          <div class="cs_portal_tab_content" id="tab-servidor">
-            <div class="row cs_gap_y_24">
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="0">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-user-tie cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Portal do Servidor</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Acesse contracheques, férias e dados
-                    funcionais</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="50">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-receipt cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Portal do Contribuinte</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Acesso a tributos e informações fiscais
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="100">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-lock cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Portal do SEI!</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Sistema Eletrônico de Informações</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="150">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-newspaper cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Diário Oficial do Município</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Publicações e atos oficiais</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="200">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-magnifying-glass cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Consulta de Processos</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Acompanhe processos administrativos</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="250">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-id-card cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Cadastro de Autoridades</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Gerenciamento de autoridades municipais
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="300">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-heart-pulse cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Portal do Beneficiário – IMAS</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Plano de saúde do servidor</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="350">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-book cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Manual – Orientações aos Agentes
-                    Públicos</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Normas e procedimentos internos</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="400">
-                  <div class="cs_service_card_icon cs_accent_bg cs_center cs_radius_12 cs_mb_20">
-                    <i class="fa-solid fa-hand cs_primary_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Cartilha de Combate ao Assédio Moral
-                  </h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Prevenção e orientações</p>
-                </a>
-              </div>
+          <!-- Right Content: Hover-Reveal Service Cards -->
+          <div class="cs_services_panel" data-aos="fade-left">
+            <!-- Cidadão Services -->
+            <div class="cs_services_grid active" id="services-cidadao">
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Folha de Pagamento</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+                  <span class="cs_reveal_text">Consulta pública de vencimentos</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Habita Barra</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-house"></i></span>
+                  <span class="cs_reveal_text">Programas habitacionais</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Concursos e Processos</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-file-pen"></i></span>
+                  <span class="cs_reveal_text">Editais e convocações</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Portal do Contribuinte</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-receipt"></i></span>
+                  <span class="cs_reveal_text">Tributos e certidões</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Junta Militar</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-shield-halved"></i></span>
+                  <span class="cs_reveal_text">Alistamento militar</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Diário Oficial</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-gavel"></i></span>
+                  <span class="cs_reveal_text">Leis e publicações</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Débitos Municipais</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                  <span class="cs_reveal_text">IPTU, ITU, ITBI, ISS</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Agendamento</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-calendar-check"></i></span>
+                  <span class="cs_reveal_text">Agende atendimentos</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_cidadao">
+                <span class="cs_hover_card_title">Atende Fácil</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-headset"></i></span>
+                  <span class="cs_reveal_text">Central de atendimento</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+            </div>
+
+            <!-- Servidor Services -->
+            <div class="cs_services_grid" id="services-servidor">
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Portal do Servidor</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-user-tie"></i></span>
+                  <span class="cs_reveal_text">Contracheques e férias</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Portal do Contribuinte</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-receipt"></i></span>
+                  <span class="cs_reveal_text">Tributos e informações</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Portal do SEI!</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-lock"></i></span>
+                  <span class="cs_reveal_text">Sistema Eletrônico</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Diário Oficial</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-newspaper"></i></span>
+                  <span class="cs_reveal_text">Publicações oficiais</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Consulta de Processos</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <span class="cs_reveal_text">Processos administrativos</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Cadastro Autoridades</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-id-card"></i></span>
+                  <span class="cs_reveal_text">Gerenciamento</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Portal IMAS</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                  <span class="cs_reveal_text">Plano de saúde</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Manual de Orientações</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-book"></i></span>
+                  <span class="cs_reveal_text">Normas e procedimentos</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_servidor">
+                <span class="cs_hover_card_title">Combate ao Assédio</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-hand"></i></span>
+                  <span class="cs_reveal_text">Cartilha e prevenção</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+            </div>
+
+            <!-- Empresas Services -->
+            <div class="cs_services_grid" id="services-empresas">
+              <a href="#" class="cs_hover_card cs_empresas">
+                <span class="cs_hover_card_title">IPTU e ITU</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                  <span class="cs_reveal_text">Guias e certidões</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_empresas">
+                <span class="cs_hover_card_title">Portal do Contribuinte</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-receipt"></i></span>
+                  <span class="cs_reveal_text">Obrigações fiscais</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_empresas">
+                <span class="cs_hover_card_title">Licitações e Contratos</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-file-contract"></i></span>
+                  <span class="cs_reveal_text">Editais e pregões</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_empresas">
+                <span class="cs_hover_card_title">Licença Ambiental</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-leaf"></i></span>
+                  <span class="cs_reveal_text">Licenciamento fácil</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_empresas">
+                <span class="cs_hover_card_title">Empresa Fácil</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-store"></i></span>
+                  <span class="cs_reveal_text">Abertura e regularização</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
+              <a href="#" class="cs_hover_card cs_empresas">
+                <span class="cs_hover_card_title">Prestador Externo</span>
+                <span class="cs_hover_card_reveal">
+                  <span class="cs_reveal_icon"><i class="fa-solid fa-building-circle-arrow-right"></i></span>
+                  <span class="cs_reveal_text">Cadastro de prestadores</span>
+                  <span class="cs_reveal_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </span>
+              </a>
             </div>
           </div>
-
-          <!-- Tab Content: Empresas -->
-          <div class="cs_portal_tab_content" id="tab-empresas">
-            <div class="row cs_gap_y_24">
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="0">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20"
-                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
-                    <i class="fa-solid fa-file-invoice-dollar cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">IPTU e ITU</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Emissão de guias e certidões</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="50">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20"
-                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
-                    <i class="fa-solid fa-receipt cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Portal do Contribuinte</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Obrigações fiscais e tributárias</p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="100">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20"
-                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
-                    <i class="fa-solid fa-file-contract cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Licitações e Contratos</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Editais, pregões e contratos públicos
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="150">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20"
-                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
-                    <i class="fa-solid fa-leaf cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Licença Ambiental Fácil</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Licenciamento ambiental simplificado
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="200">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20"
-                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
-                    <i class="fa-solid fa-store cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Empresa Fácil</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Abertura e regularização de empresas
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <a href="#" class="cs_service_card cs_white_bg cs_radius_16 d-block h-100" data-aos="fade-up"
-                  data-aos-delay="250">
-                  <div class="cs_service_card_icon cs_blue_bg1 cs_center cs_radius_12 cs_mb_20"
-                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
-                    <i class="fa-solid fa-building-circle-arrow-right cs_white_color cs_fs_24"></i>
-                  </div>
-                  <h3 class="cs_service_card_title cs_fs_18 cs_semibold cs_mb_8">Prestador de outro município</h3>
-                  <p class="cs_service_card_desc cs_primary_color cs_fs_14 mb-0">Cadastro de prestadores externos</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
       <div class="cs_height_80 cs_height_lg_40"></div>
